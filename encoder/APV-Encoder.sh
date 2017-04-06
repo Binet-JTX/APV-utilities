@@ -10,7 +10,7 @@ cd $temp_dir
 
 #Parameters
 folder_to_encode="../"$1
-desired_size=$(echo "$2*10^6" | bc)
+desired_size=$(echo "$2*10^6" | tr -d $'\r'| bc)
 video_quality_factor="28"
 audio_bitrate=$(echo "192*10^3" | bc)
 
