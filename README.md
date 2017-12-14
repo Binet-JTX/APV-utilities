@@ -34,7 +34,7 @@ Une fois le dossier de vidéos terminé, il ne reste plus qu'à copier-coller le
 
 ### APV-Copy
 
-Le dossier `copy` contient tous les scripts nécessaires à la mise en place d'une copie massive de l'APV sur des clés USB branchées sur les 150 ordis des salles infos de l'X. Se référer à  pour plus de détails,
+Le dossier `copy` contient tous les scripts nécessaires à la mise en place d'une copie massive de l'APV sur des clés USB branchées sur les 150 ordis des salles infos de l'X. Se référer à https://wikix.polytechnique.org/APV/Dossier_de_passation/Chargement_des_cl%C3%A9s_USB#Les_ordis_de_salle_info pour plus de détails,
 
 #### copy_rsync_2013
 Contient les scripts utilisés par l'APV 2013. Ils utilisent `rsync` pour la copie ainsi qu'un script de diffusion logarithmique du contenu. La copie prend plusieurs jours sur les ordinateurs des salles info. Les auteurs sont Augustin Lenormand et Guillaume Boisseau.
