@@ -39,5 +39,5 @@ Le dossier `copy` contient tous les scripts nécessaires à la mise en place d'u
 #### copy_rsync_2013
 Contient les scripts utilisés par l'APV 2013. Ils utilisent `rsync` pour la copie ainsi qu'un script de diffusion logarithmique du contenu. La copie prend plusieurs jours sur les ordinateurs des salles info. Les auteurs sont Augustin Lenormand et Guillaume Boisseau.
 
-#### copy_dd_
+#### copy_dd_2014
 Contient les scripts utilisés par l'APV 2014 (`/bin`) ainsi que divers fichiers de logs et tests qui peuvent valoir le coup d'être lus. La copie utilise `dd` au lieu de `rsync`, et est beaucoup plus rapide mais aussi un peu plus délicate à utiliser. Les scripts à regaredr en priorité sont les `prepare*.sh` et `copy.sh`. L'auteur est Guillaume Didier.
