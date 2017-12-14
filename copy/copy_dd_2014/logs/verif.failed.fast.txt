@@ -1,0 +1,3 @@
+calanthe.sdc.fail
+dordogne.sdb.fail
+pleione.sdc.fail
