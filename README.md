@@ -1,5 +1,5 @@
 # APV-utilities
-Scripts divers utiles à l'APV d'une année à l'autre, mis en place par l'APV2013
+Scripts divers utiles à l'APV d'une année à l'autre, mis en place par l'APV2013, mis à jour par l'APV2014.
 
 ## APV-Encoder
 
@@ -34,6 +34,10 @@ Une fois le dossier de vidéos terminé, il ne reste plus qu'à copier-coller le
 
 ### APV-Copy
 
-Le dossier `copy` contient tous les scripts nécessaires à la mise en place d'une copie massive de l'APV sur des clés USB branchées sur les 150 ordis des salles infos de l'X.
+Le dossier `copy` contient tous les scripts nécessaires à la mise en place d'une copie massive de l'APV sur des clés USB branchées sur les 150 ordis des salles infos de l'X. Se référer à  pour plus de détails,
 
-Attention, seul un magicien du `ssh` et du `screen` sera en mesure d'exécuter la manœuvre en attendant que le respo copie 2013 fasse son dossier de passation.
+#### copy_rsync_2013
+Contient les scripts utilisés par l'APV 2013. Ils utilisent `rsync` pour la copie ainsi qu'un script de diffusion logarithmique du contenu. La copie prend plusieurs jours sur les ordinateurs des salles info. Les auteurs sont Augustin Lenormand et Guillaume Boisseau.
+
+#### copy_dd_
+Contient les scripts utilisés par l'APV 2014 (`/bin`) ainsi que divers fichiers de logs et tests qui peuvent valoir le coup d'être lus. La copie utilise `dd` au lieu de `rsync`, et est beaucoup plus rapide mais aussi un peu plus délicate à utiliser. Les scripts à regaredr en priorité sont les `prepare*.sh` et `copy.sh`. L'auteur est Guillaume Didier.
