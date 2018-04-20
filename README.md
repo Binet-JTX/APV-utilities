@@ -41,3 +41,6 @@ Contient les scripts utilisés par l'APV 2013. Ils utilisent `rsync` pour la cop
 
 #### copy_dd_2014
 Contient les scripts utilisés par l'APV 2014 (`/bin`) ainsi que divers fichiers de logs et tests qui peuvent valoir le coup d'être lus. La copie utilise `dd` au lieu de `rsync`, et est beaucoup plus rapide mais aussi un peu plus délicate à utiliser. Les scripts à regaredr en priorité sont les `prepare*.sh` et `copy.sh`. L'auteur est Guillaume Didier.
+
+### APV-Patcher
+Contient le script servant à patcher après le départ de la promo les dernières vidéos (ADD, corrections de bugs,...). Les scripts 2013 et 2014 sont présents ; pour en créer un nouveau il suffit d'y mettre à jour la partie correspondant au contenu. Ce script doit accompagner un dossier `contents` contenant les fichiers à mettre sur l'APV, éventuellement en remplaçant d'anciens fichiers.
