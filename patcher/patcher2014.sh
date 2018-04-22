@@ -51,41 +51,41 @@ copy_files() {
 	printf "Début de la mise à jour...\n\n"
 
     printf "Correction de bugs mineurs...\n"
-    rsync -azhr --info=progress2 "$script_dir/contents/EOGN/" "$apv_dir/02_Vie_de_Promo/03_Ecoles_d_Officiers/EOGN/"
-    rsync -azhr --info=progress2 "$script_dir/contents/juin2013/" "$apv_dir/01_Projections_JTX/01_JTX2013_juin/"
+    rsync -azhr "$script_dir/contents/EOGN/" "$apv_dir/02_Vie_de_Promo/03_Ecoles_d_Officiers/EOGN/"
+    rsync -azhr "$script_dir/contents/juin2013/" "$apv_dir/01_Projections_JTX/01_JTX2013_juin/"
     tput cuu 2
     tput ed
     printf "Correction de bugs mineurs...               [OK]\n"
 
     printf "Copie des bonus supplémentaires...\n"
-    rsync -azhr --info=progress2 "$script_dir/contents/bonusdivers/" "$apv_dir/07_Bonus/03_Divers/"
+    rsync -azhr "$script_dir/contents/bonusdivers/" "$apv_dir/07_Bonus/03_Divers/"
     rsync -azhr "$script_dir/contents/src/" "$apv_dir/source/js/utils/src" > /dev/null
     tput cuu 2
     tput ed
     printf "Copie des bonus supplémentaire...           [OK]\n"
 
     printf "Copie du TSGED 2017...\n"
-    rsync -azhr --info=progress2 "$script_dir/contents/TSGED/" "$apv_dir/02_Vie_de_Promo/19_TSGED_2017/"
+    rsync -azhr "$script_dir/contents/TSGED/" "$apv_dir/02_Vie_de_Promo/19_TSGED_2017/"
     tput cuu 2
     tput ed
     printf "Copie du TSGED 2017...                      [OK]\n"
 
     printf "Copie des vidéos de l'ADD...\n"
-    rsync -azhr --info=progress2 "$script_dir/contents/ADD/" "$apv_dir/06_Amphi_de_Depart/"
+    rsync -azhr "$script_dir/contents/ADD/" "$apv_dir/06_Amphi_de_Depart/"
     tput cuu 2
     tput ed
     printf "Copie des vidéos de l'ADD...                [OK]\n"
 
     printf "Copie des nouveaux spectacles et confs...\n"
-    rsync -azhr --info=progress2 "$script_dir/contents/spectacles/" "$apv_dir/03_Evenements/01_Spectacles"
-    rsync -azhr --info=progress2 "$script_dir/contents/concerts/" "$apv_dir/03_Evenements/02_Concerts"
-    rsync -azhr --info=progress2 "$script_dir/contents/confs/" "$apv_dir/03_Evenements/03_Conferences"
+    rsync -azhr "$script_dir/contents/spectacles/" "$apv_dir/03_Evenements/01_Spectacles"
+    rsync -azhr "$script_dir/contents/concerts/" "$apv_dir/03_Evenements/02_Concerts"
+    rsync -azhr "$script_dir/contents/confs/" "$apv_dir/03_Evenements/03_Conferences"
     tput cuu 2
     tput ed
     printf "Copie des nouveaux spectacles et confs...   [OK]\n"
 
     printf "Copie des nouveaux menus de présentation...\n"
-    rsync -azhr --info=progress2 "$script_dir/contents/source/" "$apv_dir/source/"
+    rsync -azhr "$script_dir/contents/source/" "$apv_dir/source/"
     tput cuu 2
     tput ed
     printf "Copie des nouveaux menus de présentation... [OK]\n"
