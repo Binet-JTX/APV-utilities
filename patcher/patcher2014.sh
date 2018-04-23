@@ -16,10 +16,13 @@ Le patch de l'APV nécessite 9 Go d'espace supplémentaire
 sur la clé USB ou le disque dur où est stocké l'APV, vérifie
 la place restante avant de lancer le patch. Appuie sur Ctrl+C
 pour quitter le patch.
-Pour connaître l'emplacement, rends-toi dans le dossier
-de l'APV avec ton explorateur de fichiers (là où est le
-fichier 'APV_2014.html'). Appuie ensuite sur CTRL+L pour
-que l'emplacement s'affiche et copie-colle le ci-dessous.
+L'emplacement est celui du dossier de l'APV où est le
+fichier 'APV_2014.html'. Par exemple sur Linux : Rends-toi dans
+le dossier avec ton explorateur de fichiers, appuie sur CTRL+L
+pour que l'emplacement s'affiche et copie-colle le ci-dessous.
+Sur Mac, clique droit sur ce dossier (ou Ctrl+clique) pour
+afficher les options, appuie sur la touche Option, et choisis
+\"copier en tant que chemion\".
 "
     choose_apv_dir
 }
@@ -53,42 +56,30 @@ copy_files() {
     printf "Correction de bugs mineurs...\n"
     rsync -azhr "$script_dir/contents/EOGN/" "$apv_dir/02_Vie_de_Promo/03_Ecoles_d_Officiers/EOGN/"
     rsync -azhr "$script_dir/contents/juin2013/" "$apv_dir/01_Projections_JTX/01_JTX2013_juin/"
-    tput cuu 2
-    tput ed
-    printf "Correction de bugs mineurs...               [OK]\n"
+    printf "Terminé\n"
 
     printf "Copie des bonus supplémentaires...\n"
     rsync -azhr "$script_dir/contents/bonusdivers/" "$apv_dir/07_Bonus/03_Divers/"
     rsync -azhr "$script_dir/contents/src/" "$apv_dir/source/js/utils/src" > /dev/null
-    tput cuu 2
-    tput ed
-    printf "Copie des bonus supplémentaire...           [OK]\n"
+    printf "Terminé\n"
 
     printf "Copie du TSGED 2017...\n"
     rsync -azhr "$script_dir/contents/TSGED/" "$apv_dir/02_Vie_de_Promo/19_TSGED_2017/"
-    tput cuu 2
-    tput ed
-    printf "Copie du TSGED 2017...                      [OK]\n"
+    printf "Terminé\n"
 
-    printf "Copie des vidéos de l'ADD...\n"
+    printf "Copie des vidéos de l'ADD (peut prendre plusieurs minutes)...\n"
     rsync -azhr "$script_dir/contents/ADD/" "$apv_dir/06_Amphi_de_Depart/"
-    tput cuu 2
-    tput ed
-    printf "Copie des vidéos de l'ADD...                [OK]\n"
+    printf "Terminé\n"
 
-    printf "Copie des nouveaux spectacles et confs...\n"
+    printf "Copie des nouveaux spectacles et confs... (peut prendre plusieurs minutes) \n"
     rsync -azhr "$script_dir/contents/spectacles/" "$apv_dir/03_Evenements/01_Spectacles"
     rsync -azhr "$script_dir/contents/concerts/" "$apv_dir/03_Evenements/02_Concerts"
     rsync -azhr "$script_dir/contents/confs/" "$apv_dir/03_Evenements/03_Conferences"
-    tput cuu 2
-    tput ed
-    printf "Copie des nouveaux spectacles et confs...   [OK]\n"
+    printf "Terminé\n"
 
     printf "Copie des nouveaux menus de présentation...\n"
     rsync -azhr "$script_dir/contents/source/" "$apv_dir/source/"
-    tput cuu 2
-    tput ed
-    printf "Copie des nouveaux menus de présentation... [OK]\n"
+    printf "Terminé\n"
 }
 
 end_message () {
